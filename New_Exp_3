@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE-AIML-3 Time Table</title>
+</head>
+<body>
+    <h2 align ="center"> ABES Engineering College,Ghaziabad <br/> Class Time Table </h2> 
+    <h3 align="center"> Department: Applied Science and Humanities </h3>
+    <b>Course:B.Tech</b>
+    <br/>
+    <b>Semester/Section-I/CSE-AIML-3</b>
+    <br/>
+    <b>Class Room No. RJ-106,RJ-201,RJ-203,RJ-204</b>
+    <table border="1" width="1300" cellpadding="1" cellspacing="0">
+        <tr>
+            <th rowspan="2">Time-> <br/>Day!</th>
+            <th>I</th>
+            <th>II</th>
+            <th>III</th>
+            <th>IV</th>
+            <th>V</th>
+            <th>VI</th>
+            <th>VII</th>
+            <th>VIII</th>
+            <th>IX</th>
+        </tr>
+        <tr>
+            <th>08:50-09:40</th>
+            <th>09:40-10:30</th>
+            <th>10:40-11:30</th>
+            <th>11:30-12:20</th>
+            <th>12:20-01:10</th>
+            <th>01:10-02:00</th>
+            <th>02:00-02:50</th>
+            <th>02:50-03:40</th>
+            <th>03:40-04:30</th>
+        </tr>
+        <tr align="center" height="100">
+            <th width="100">Monday</th>
+            <td bgcolor="Bisque">25CS101 <br/> (SOV) <br/> RJ-202</td>
+            <td bgcolor="Bisque">25CS101 <br/> (SOV) <br/> RJ-202</td>
+            <td bgcolor="Orange">25AS102 <br/> (PA) <br/> RJ-202</td>
+            <td bgcolor="DodgerBlue">25EC101 <br/> (KC) <br/> RJ-202</td>
+            <td width="120" rowspan="5">LUNCH</td>
+            <td bgcolor="lightGreen">25HU101 <br/> (KG) <br/> RJ-202</td>
+            <td bgcolor="LawnGreen">25ME101 <br/> (CR) <br/> RJ-202</td>
+            <td bgcolor="Paleturquoise" colspan="2">25VA151 <br/> (SSI) <br/> RJ-202</td>
+        </tr>
+        <tr align="center" height="100">
+            <th>Tuesday</th>
+            <td bgcolor="Orange">25AS102 <br/> (PA) <br/> RJ-204</td>
+            <td bgcolor="Yellow">25HU102 <br/> (SSH) <br/> RJ-204</td>
+            <td bgcolor="Orange">25AS102 <br/> (PA) <br/> RJ-204</td>
+            <td>Mentor-Mentee <br/> (CR,SOV) <br/> RJ-204</td>
+            <td bgcolor="LawnGreen" colspan="2">25ME151 <br/> (CR,MB) <br/> Vishwakarma Block Ground Floor</td>
+            <td bgcolor="DodgerBlue">25EC101 <br/> (KC) <br/> RJ-201</td>
+            <td bgcolor="LawnGreen">25ME101 <br/> (CR) <br/> RJ-201</td>
+        </tr>
+        <tr align="center" height="100">
+            <th>Wednesday</th>
+            <td bgcolor="Bisque" colspan="2">25CS151 <br/> (SOV) <br/> RJ-203</td>
+            <td bgcolor="LawnGreen">25HU102 <br/> (SSH) <br/> RJ-203</td>
+            <td bgcolor="LawnGreen">25ME101 <br/> (CR) <br/> RJ-203</td>
+            <td bgcolor="Orange">25AS102 <br/> (PA) <br/> RJ-201</td>
+            <td bgcolor="DodgerBlue">25EC101 <br/> (KC) <br/> RJ-201</td>
+            <td bgcolor="Orange">25AS102 <br/> (PA) <br/> RJ-201</td>
+            <td></td>
+        </tr>
+        <tr align="center" height="100">
+            <th>Thursday</th>
+            <td bgcolor="lightGreen">25HU101 <br/> (KG) <br/> RJ-201</td>
+            <td bgcolor="LawnGreen">25ME101 <br/> (CR) <br/> RJ-201</td>
+            <td bgcolor="DodgerBlue" colspan="2">25EC151 <br/> (AJ,ATS) <br/> Bhabha Block I Floor(BH-115)</td>
+            <td bgcolor="Orange">25AS102 <br/> (PA) <br/> RJ-202</td>
+            <td bgcolor="Bisque">25CS101 <br/> (SOV) <br/> RJ-202</td>
+            <td bgcolor="Bisque">25CS101 <br/> (SOV) <br/> RJ-202</td>
+            <td bgcolor="DodgerBlue">25EC101 <br/> (KC) <br/> RJ-202</td>
+        </tr>
+        <tr align="center" height="100">
+            <th>Friday</th>
+            <td bgcolor="LawnGreen">25ME101 <br/> (CR) <br/> RJ-203</td>
+            <td bgcolor="DodgerBlue">25EC101 <br/> (KC) <br/> RJ-203</td>
+            <td bgcolor="Paleturquoise">25VA151 <br/> (SSI) <br/> RJ-203</td>
+            <td bgcolor="Orange">25AS102 <br/> (PA) <br/> RJ-203</td>
+            <td bgcolor="lightGreen" colspan="2">25HU151 <br/> (KG,RRP) <br/> KC Block V Floor (KC-510)</td>
+            <td bgcolor="LawnGreen">25HU102 <br/> (SSH) <br/> RJ-106</td>
+            <td bgcolor="lightGreen">25HU101 <br/> (KG) <br/> RJ-106</td>
+        </tr>
+    </table>  
