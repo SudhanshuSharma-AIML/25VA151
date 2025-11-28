@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name= "viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>CSS Selectors - 2</title>
+        <style>
+            .container h1 {
+                color: rgb(255, 0, 0);
+                font-family: "verdana";
+                font-size: 30px;
+                font-weight: 600;
+            }
+
+            div p {
+                color: rgb(0, 128, 128);
+                font-family: "tahoma";
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            div div p{
+                background-color: rgb(200, 255, 62);
+                color: rgb(255, 0, 0);
+                font-family: "tahoma";
+                font-size: 16px;
+                font-weight: 500;
+            } 
+
+            div + p {
+                color: rgb(213, 140, 140);
+                font-family: "monospace";
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            div ul li p {
+                color: rgb(49, 184, 184);
+                font-family: "tahoma";
+                font-size: 12px;
+                font-weight: 500;
+            }
+            
+            a:hover{
+                color: red;
+            }
+            a:visited{
+                color: rgb(255, 108, 184);
+            }
+
+            div p::first-letter {
+                color: rgb(255, 0, 0);
+                font-size: 30px;
+                font-weight: 700;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class = "container">
+            <h1 align="center"><u>
+                HTML UNIT 03 - CSS Selectors 2
+            </u></h1>
+            <p>
+            You can create multiple class selectors in your CSS code to style different groups of elements.
+            Each class selector should have a unique name to avoid conflicts. You can then apply these classes 
+            to different HTML elements as needed. This allows you to reuse styles across multiple elements without 
+            having to write the same CSS properties repeatedly.
+            </p>
+            <div>
+                <p>
+                    css selectors are used to "find" (or select) the HTML elements you want to style. In this example, we have created two class selectors: "txt" and "para".
+                    The "txt" class selector styles the text color to red, font family to Verdana, font size to 18 pixels, and font weight to 600. 
+                    The "para" class selector styles the text color to a teal shade, font family to Tahoma, font size to 16 pixels, and font weight to 500. 
+                </p>
+            </div>
+            <ul>
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+                <li><p>
+                    Fourth item inside a paragraph tag. this paragraph is styled using the "para" class selector defined in the previous example. It has a teal text color,
+                    Tahoma font family, 16 pixels font size, and a font weight of 500. the styles are applied consistently across all elements that use this class.
+                    These styles help to create a cohesive and visually appealing design for the webpage. Using class selectors in CSS allows for efficient and organized styling of HTML elements.
+                </p></li>
+            </ul>
+        </div>
+        
+        <p>
+            This paragraph is styled using the "txt" class selector defined in the previous example. It has a red text color,
+            Verdana font family, 18 pixels font size, and a font weight of 600. the styles are applied consistently across all elements that use this class.
+            These styles help to create a cohesive and visually appealing design for the webpage. Using class selectors in CSS allows for efficient and organized styling of HTML elements.
+        </p>
+        <a href="https://youtu.be/09839DpTctU?si=jhPv06X8m-ChsGMg">To Learn More....</a>
+    </body>
+</html>

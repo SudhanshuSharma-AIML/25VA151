@@ -44,7 +44,7 @@
             <td bgcolor="Orange">25AS102 <br/> (PA) <br/> RJ-202</td>
             <td bgcolor="DodgerBlue">25EC101 <br/> (KC) <br/> RJ-202</td>
             <td width="120" rowspan="5">LUNCH</td>
-            <td bgcolor="lightGreen">25HU101 <br/> (KG) <br/> RJ-202</td>
+            <td bgcolor="Yellow">25HU102 <br/> (SSH) <br/> RJ-202</td>
             <td bgcolor="LawnGreen">25ME101 <br/> (CR) <br/> RJ-202</td>
             <td bgcolor="Paleturquoise" colspan="2">25VA151 <br/> (SSI) <br/> RJ-202</td>
         </tr>
@@ -85,7 +85,7 @@
             <td bgcolor="Paleturquoise">25VA151 <br/> (SSI) <br/> RJ-203</td>
             <td bgcolor="Orange">25AS102 <br/> (PA) <br/> RJ-203</td>
             <td bgcolor="lightGreen" colspan="2">25HU151 <br/> (KG,RRP) <br/> KC Block V Floor (KC-510)</td>
-            <td bgcolor="LawnGreen">25HU102 <br/> (SSH) <br/> RJ-106</td>
+            <td bgcolor="Yellow">25HU102 <br/> (SSH) <br/> RJ-106</td>
             <td bgcolor="lightGreen">25HU101 <br/> (KG) <br/> RJ-106</td>
         </tr>
     </table>  
