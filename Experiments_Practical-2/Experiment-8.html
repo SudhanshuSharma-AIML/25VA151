@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ID Card</title>
+
+<style>
+
+body {
+    background: black;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    background: white;
+    width: 800px;
+    height: 440px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.h1 {
+    background: brown;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 5px;
+    height: 75px;
+}
+
+.h1 img {
+    height: 60px;
+    margin-left: 20px;
+}
+
+.h1-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.b1 {
+    text-align: center;
+    padding: 3px;
+    font-size: 12px;
+}
+
+.b2 {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+}
+
+.p1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.self {
+    display: flex;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.pac1 {
+    width: 210px;
+    font-weight: bold;
+}
+
+.pac2 {
+    flex: 1;
+    border-bottom: 2px dotted black;
+    height: 20px;
+}
+
+.p2 {
+    width: 240px;
+    text-align: center;
+}
+
+.p2 p {
+    color: brown;
+    font-size: 17px;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+
+#image {
+    width: 150px;
+    height: 170px;
+    border: 1px solid black;
+    object-fit: cover;
+}
+
+.auth {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<main>
+
+    <div class="h1">
+        <img src="https://college4u.in/wp-content/uploads/2018/03/abes.png">
+
+        <div class="h1-title">
+            ABES Engineering College <br> (College Code - 032)
+        </div>
+    </div>
+
+    <div class="b1">
+        19th KM Stone, NH-09, Ghaziabad-201009, UP, India.<br>
+        Ph.: 0120-7135112, 9999889341, Fax: 0120-7135115, Email: info@abes.ac.in, Website: www.abes.ac.in
+    </div>
+
+    <div class="b2">
+
+        <div class="p1">
+
+            <div class="self">
+                <div class="pac1">Admission Number</div>
+                <div class="pac2">2025B15310191</div>
+            </div>
+
+            <div class="self">
+                <div class="pac1">Name</div>
+                <div class="pac2">Sudhanshu Sharma</div>
+            </div>
+
+            <div class="self">
+                <div class="pac1">Father's Name</div>
+                <div class="pac2">Dr. M.K.Sharma </div>
+            </div>
+
+            <div class="self">
+                <div class="pac1">Course</div>
+                <div class="pac2">B.Tech – CSE (AIML)</div>
+            </div>
+
+            <div class="self">
+                <div class="pac1">Day Scholar/Hosteller</div>
+                <div class="pac2"> Day Scholar</div>
+            </div>
+
+            <div class="self">
+                <div class="pac1">Issuing Date</div>
+                <div class="pac2">21/08/2025</div>
+            </div>
+           <br> <br>
+            <div class="self"><b>
+                 Sign. of Verifying Authority
+            </b>
+               
+            </div>
+
+            <p class="self">
+                *Valid for max. 3 months from date of issuing.
+            </p>
+
+        </div>
+
+        <div class="p2">
+            <p>Temporary I-Card</p>
+            <img src="sudhanshu.jpg" id="image">
+            <p class="auth">Authorised Signatory</p>
+        </div>
+
+    </div>
+
+</main>
+
+</body>
+</html>
