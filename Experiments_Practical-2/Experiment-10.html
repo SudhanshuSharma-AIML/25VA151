@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Commerce Website</title>
+
+<style>
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background: #f5f5f5;
+}
+
+.navbar{
+  width: 100%;
+  background: #111;
+  color: #fff;
+  padding: 15px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo{
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.nav-links{
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.nav-links a:hover{
+  color: #ff9800;
+}
+
+.search-box input{
+  padding: 6px 10px;
+  border: none;
+  border-radius: 3px;
+}
+
+.cart{
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.hamburger{
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media(max-width: 768px){
+  .nav-links,
+  .search-box{
+    display: none;
+  }
+
+  .hamburger{
+    display: block;
+  }
+
+  .mobile-menu{
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #222;
+    padding: 20px 0;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .mobile-menu a{
+    color: #fff;
+    font-size: 18px;
+  }
+
+  .mobile-menu input{
+    padding: 7px 10px;
+    width: 80%;
+    border-radius: 4px;
+    border: none;
+  }
+}
+
+.show{
+  display: flex !important;
+}
+
+.products-section{
+  padding: 40px 5%;
+}
+
+.products-section h2{
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.product-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.product-card{
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.product-card img{
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-card h3{
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.price{
+  color: #e91e63;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.rating{
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.product-card button{
+  width: 100%;
+  padding: 10px;
+  background: #ff9800;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.product-card button:hover{
+  background: #e68900;
+}
+
+.buy-btn{
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  padding: 10px;
+  background: #e91e63;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: .3s;
+}
+
+.buy-btn:hover{
+  background: #c2185b;
+}
+
+@media(max-width: 900px){
+  .product-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 600px){
+  .product-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">MyShop</div>
+
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">Categories</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div class="search-box">
+    <input type="text" placeholder="Search products...">
+  </div>
+
+  <div class="cart">🛒</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+</nav>
+
+<div class="products-section">
+  <h2>Welcome to My Shop !!</h2>
+  <p>Your one-stop destination for all shopping needs.</p>
+
+  <div class="product-grid">
+
+    <div class="product-card">
+      <img src="https://www.bootbarn.com/on/demandware.static/-/Sites-master-product-catalog-shp/default/dw8da3ef2d/images/605/010605_06_P1.JPG" alt="">
+      <h3>Levi's Men's Straight Fit Jeans</h3>
+      <div class="price">₹1,899</div>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+      <button>Add to Cart</button>
+      <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/26524048/2024/4/2/8300a004-2429-4e0f-a91c-31f97dd840b71712049921830-Allen-Solly-Sport-Men-Shirts-7111712049921358-1.jpg" alt="">
+      <h3>Allen Solly Men's Cotton Shirt</h3>
+      <div class="price">₹1,299</div>
+      <div class="rating">⭐⭐⭐⭐☆</div>
+      <button>Add to Cart</button>
+      <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://cdn19.nnnow.com/web-images/preview/styles/N7EHUALF7DS/1648812775338/1.jpg" alt="">
+      <h3>US Polo Men's Round Neck T-Shirt</h3>
+      <div class="price">₹749</div>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+      <button>Add to Cart</button>
+      <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+
+    </div>
+</div>
+
+<script>
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
