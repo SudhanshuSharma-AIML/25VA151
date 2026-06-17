@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="overlay" id="screen-overlay" onclick="closeSidebar(); closeCart();"></div>
+
+    <div class="sidebar" id="amazon-sidebar">
+        <div class="sidebar-header">Hello, Sudhanshu</div>
+        <div class="sidebar-title">Trending</div>
+        <div class="sidebar-menu-item">Best Sellers</div>
+        <div class="sidebar-menu-item">New Releases</div>
+        <div class="sidebar-menu-item">Movers and Shakers</div>
+        <hr>
+        <div class="sidebar-title">Shop by Category</div>
+        <div class="sidebar-menu-item">Mobiles, Computers</div>
+        <div class="sidebar-menu-item">TV, Appliances, Electronics</div>
+        <div class="sidebar-menu-item">Men's Fashion</div>
+        <div class="sidebar-menu-item">Women's Fashion</div>
+    </div>
+
+    <div class="cart-modal" id="checkout-modal">
+        <div class="modal-header">🛒 Shopping Cart Review</div>
+        <div class="cart-items-list" id="modal-items-container"></div>
+        <div class="modal-total" id="modal-total-price">Total: ₹0</div>
+        <button class="close-modal-btn" onclick="closeCart()">Close</button>
+        <button class="checkout-btn" onclick="alert('Order Placed Successfully! Thank you for shopping.')">Proceed to Buy</button>
+    </div>
+
+    <header class="navbar">
+        <div class="nav-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">amazon<span>.in</span></div>
+        
+        <div class="nav-address" onclick="alert('Changing delivery pin code...')">
+            Delivering to Sudhanshu Sharma
+            <strong> Abes College Ghaziabad 201009</strong>
+        </div>
+
+        <div class="nav-search">
+            <select class="search-select">
+                <option>All Departments</option>
+                <option>Electronics</option>
+                <option>Appliances</option>
+            </select>
+            <input type="text" class="search-input" id="search-box" placeholder="Search Amazon.in">
+            <button class="search-btn" id="search-click-btn">🔍</button>
+        </div>
+
+        <div class="nav-right">
+            <div class="nav-link" onclick="alert('Opening Account Panel...')">
+                <span>Hello, Sudhanshu</span>
+                <strong>Account & Lists</strong>
+            </div>
+            <div class="nav-link" onclick="alert('Opening Order History...')">
+                <span>Returns</span>
+                <strong>& Orders</strong>
+            </div>
+            <div class="nav-cart" onclick="openCartModal()">
+                🛒 Cart <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="sub-nav">
+        <div onclick="openSidebar()">☰ All Menu</div>
+        <div>Fresh</div>
+        <div>MX Player</div>
+        <div>Sell</div>
+        <div>Gift Cards</div>
+        <div>Amazon Pay</div>
+        <div style="font-weight: bold; color: #febd69;">Prime User</div>
+    </nav>
+
+    <div class="hero-container">
+        <img class="banner-img" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600" alt="Banner">
+    </div>
+
+    <main class="main-content">
+
+        <div class="card">
+            <h2>Pick up where you left off</h2>
+            <div class="grid-2x2">
+                <div class="grid-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQYssLq6efb4U7MkdwXuGG2ne6FF_YziYZwHjhmN1OXHKJAxvFitPU8kZ0cN2VUxFngO8b9gbZUV-84DBg967tg8XQ7vIYG8PVPpyObIBK7&usqp=CAc">
+                    <p>Atomberg Renesa</p>
+                    <div class="price">₹3,499</div>
+                    <button class="btn-add" onclick="addItemToCart('Atomberg Renesa Fan', 3499)">Add to Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ6YTKpsBU-CRLcLwWItTz8jdimga_7qouHL37isFKFR0fizZBy9SxDH3djSjUC4dkTwshViSOwgpGOSg_dsucO93hdyS_JTAlKqQMJsTY&usqp=CAc">
+                    <p>Atomberg Epo</p>
+                    <div class="price">₹4,199</div>
+                    <button class="btn-add" onclick="addItemToCart('Atomberg Epo Fan', 4199)">Add to Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTq8S2MID2xswb7oa70xd1MQIXU3f4SADQUN34eL_1GbUjm1-JmbqSSBtWw_aw&usqp=CAc">
+                    <p>Polycab Wizzy</p>
+                    <div class="price">₹2,100</div>
+                    <button class="btn-add" onclick="addItemToCart('Polycab Wizzy Fan', 2100)">Add to Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="https://cms.polycab.com/media/yadfxgxp/fcespst031p_img_01.png?format=webp">
+                    <p>Polycab Plus</p>
+                    <div class="price">₹2,850</div>
+                    <button class="btn-add" onclick="addItemToCart('Polycab Plus Fan', 2850)">Add to Cart</button>
+                </div>
+            </div>
+            <a href="#">See more custom fans</a>
+        </div>
+
+        <div class="card">
+            <h2>Continue shopping deals</h2>
+            <div class="grid-2x2">
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=200">
+                    <p>Geonix 512GB SSD</p>
+                    <div class="price">₹1,999</div>
+                    <button class="btn-add" onclick="addItemToCart('Geonix 512GB SSD', 1999)">Add to Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=200">
+                    <p>Women's Luxury Dress</p>
+                    <div class="price">₹1,499</div>
+                    <button class="btn-add" onclick="addItemToCart('Women Dress', 1499)">Add to Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=200">
+                    <p>Ryzen 5 Laptop</p>
+                    <div class="price">₹42,000</div>
+                    <button class="btn-add" onclick="addItemToCart('Ryzen 5 Laptop', 42000)">Add to Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?w=200">
+                    <p>Travel Trolley Suitcase</p>
+                    <div class="price">₹3,200</div>
+                    <button class="btn-add" onclick="addItemToCart('Travel Trolley Bag', 3200)">Add to Cart</button>
+                </div>
+            </div>
+            <a href="#">Explore clearance center</a>
+        </div>
+
+        <div class="card">
+            <h2>Keep shopping for</h2>
+            <div class="grid-2x2">
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=200">
+                    <p>OnePlus Nord CE</p>
+                    <div class="price">₹19,999</div>
+                    <button class="btn-add" onclick="addItemToCart('OnePlus Nord CE', 19999)">Add to Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1547887537-6158d64c35b3?w=200">
+                    <p>Aroma Diffuser Set</p>
+                    <div class="price">₹799</div>
+                    <button class="btn-add" onclick="addItemToCart('Aroma Diffuser', 799)">Add to Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=200">
+                    <p>Designer Warm Lamp</p>
+                    <div class="price">₹1,150</div>
+                    <button class="btn-add" onclick="addItemToCart('Designer Warm Lamp', 1150)">Add to Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200">
+                    <p>Wireless Headphones</p>
+                    <div class="price">₹2,499</div>
+                    <button class="btn-add" onclick="addItemToCart('Wireless Headphones', 2499)">Add to Cart</button>
+                </div>
+            </div>
+            <a href="#">Manage your history</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Back to top</div>
+        <div class="footer-links">
+            <div class="footer-col">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="#">About Amazon</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Connect with Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Let Us Help You</h3>
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Help Center</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-logo-line">amazon.in</div>
+    </footer>
+
+   <script src="js/script.js"></script>
+</body>
+</html>
