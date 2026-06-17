@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiment 8 - Counter with State</title>
+  <style>
+    body{font-family:Arial,sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center;background:#eef2ff;margin:0}
+    .card{background:#fff;padding:24px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);text-align:center;width:320px}
+    #count{font-size:48px;margin:16px 0;color:#1d4ed8}
+    button{padding:10px 14px;border:0;border-radius:8px;margin:0 6px;cursor:pointer}
+    .inc{background:#16a34a;color:#fff}.dec{background:#dc2626;color:#fff}.reset{background:#334155;color:#fff}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Experiment 8: Counter</h1>
+    <div id="count">0</div>
+    <button class="inc" onclick="update(1)">+1</button>
+    <button class="dec" onclick="update(-1)">-1</button>
+    <button class="reset" onclick="resetCount()">Reset</button>
+  </main>
+  <script>
+    let count = 0;
+    const countEl = document.getElementById('count');
+    function render(){ countEl.textContent = count; }
+    function update(step){ count += step; render(); }
+    function resetCount(){ count = 0; render(); }
+  </script>
+</body>
+</html>
