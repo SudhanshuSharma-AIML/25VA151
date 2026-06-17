@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experiment 10</title>
+</head>
+<body>
+  <h1>Experiment 10</h1>
+  <pre>Experiment 10
+Title:
+Java OOP Concepts Implementation
+Problem Statement:
+Create Java classes demonstrating encapsulation, inheritance, and abstraction.
+Create a Bank Management System application where:
+Create an abstract class BankAccount with: 
+accountNumber 
+accountHolderName 
+balance 
+Abstract method: calculateInterest() 
+Create two subclasses: 
+SavingsAccount 
+CurrentAccount 
+Implement: 
+Encapsulation (private data members with getters and setters) 
+Inheritance (SavingsAccount and CurrentAccount extend BankAccount) 
+Abstraction (abstract method implemented in subclasses) 
+Create a main class to: 
+Create objects 
+Deposit money 
+Display account details 
+Calculate interest 
+Objectives:
+After completing this experiment, students will be able to:
+Understand Object-Oriented Programming principles 
+Implement Encapsulation using private data members 
+Implement Inheritance using extends keyword 
+Implement Abstraction using abstract classes 
+Create real-world object relationships 
+Theory:
+Object-Oriented Programming (OOP) is a programming paradigm based on objects and classes. It helps in creating modular, reusable, and maintainable software systems.
+Encapsulation
+Encapsulation means wrapping data and methods together into a single unit (class) and restricting direct access to data using private variables and getter/setter methods.
+Inheritance
+Inheritance allows one class to acquire properties and behaviors of another class using the extends keyword.
+Abstraction
+Abstraction hides implementation details and shows only essential features using abstract classes and methods.
+In this experiment, a BankAccount abstract class is created and extended by SavingsAccount and CurrentAccount classes.
+Algorithm:
+Start the program. 
+Create an abstract class BankAccount with variables: 
+accountNumber 
+accountHolderName 
+balance 
+Declare an abstract method calculateInterest(). 
+Create a SavingsAccount class extending BankAccount. 
+Implement the calculateInterest() method. 
+Create a CurrentAccount class extending BankAccount. 
+Implement the calculateInterest() method. 
+Create a Main class. 
+Create objects for SavingsAccount and CurrentAccount. 
+Perform operations: 
+Deposit money 
+Display account details 
+Calculate interest 
+Display results on the console. 
+End the program.
+package demo;
+// Abstract class
+abstract class BankAccount {
+    int accountNumber;
+    String accountHolderName;
+    double balance;
+    // Constructor
+    BankAccount(int accountNumber, String accountHolderName, double balance) {
+        this.accountNumber = accountNumber;
+        this.accountHolderName = accountHolderName;
+        this.balance = balance;
+    }
+    // Deposit Method
+    void deposit(double amount) {
+        balance = balance + amount;
+        System.out.println("Amount Deposited: " + amount);
+    }
+    // Display Account Details
+    void displayDetails() {
+        System.out.println("Account Number: " + accountNumber);
+        System.out.println("Account Holder Name: " + accountHolderName);
+        System.out.println("Balance: " + balance);
+    }
+    // Abstract Method
+    abstract void calculateInterest();
+}
+// SavingsAccount class
+class SavingsAccount extends BankAccount {
+    SavingsAccount(int accountNumber, String accountHolderName, double balance) {
+        super(accountNumber, accountHolderName, balance);
+    }
+    void calculateInterest() {
+        double interest = balance * 0.05;
+        System.out.println("Savings Account Interest: " + interest);
+    }
+}
+// CurrentAccount class
+class CurrentAccount extends BankAccount {
+    CurrentAccount(int accountNumber, String accountHolderName, double balance) {
+        super(accountNumber, accountHolderName, balance);
+    }
+    void calculateInterest() {
+        double interest = balance * 0.02;
+        System.out.println("Current Account Interest: " + interest);
+    }
+}
+// Main class
+public class Exp10 {
+    public static void main(String[] args) {
+        // Creating objects
+        SavingsAccount sa = new SavingsAccount(101, "Rahul", 10000);
+        CurrentAccount ca = new CurrentAccount(102, "Anita", 20000);
+        System.out.println("----- Savings Account -----");
+        sa.deposit(2000);
+        sa.displayDetails();
+        sa.calculateInterest();
+        System.out.println();
+        System.out.println("----- Current Account -----");
+        ca.deposit(3000);
+        ca.displayDetails();
+        ca.calculateInterest();
+    }
+}
+Output</pre>
+</body>
+</html>
