@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiment 7 - Component Style UI</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f5f7fb; margin:0; padding:24px; }
+    h1 { text-align:center; }
+    .wrap { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; max-width:900px; margin:20px auto; }
+    .student { background:#fff; border-radius:10px; padding:16px; box-shadow:0 4px 12px rgba(0,0,0,.08); }
+    .student h2 { margin:0 0 8px; color:#0f766e; font-size:20px; }
+    .student p { margin:6px 0; }
+  </style>
+</head>
+<body>
+  <h1>Experiment 7: Component-like Student Cards</h1>
+  <div id="students" class="wrap"></div>
+
+  <script>
+    const data = [
+      { name: 'Raj', course: 'B.Tech', marks: 90 },
+      { name: 'Ram', course: 'M.Tech', marks: 95 },
+      { name: 'Rohan', course: 'MCA', marks: 99 }
+    ];
+
+    const root = document.getElementById('students');
+    data.forEach((s) => {
+      const card = document.createElement('article');
+      card.className = 'student';
+      card.innerHTML = `
+        <h2>${s.name}</h2>
+        <p><strong>Course:</strong> ${s.course}</p>
+        <p><strong>Marks:</strong> ${s.marks}</p>
+      `;
+      root.appendChild(card);
+    });
+  </script>
+</body>
+</html>
